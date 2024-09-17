@@ -105,7 +105,8 @@ li {
 }
 
 .about {
-    border-radius: 5px;
+    border-radius: 10px;
+        box-shadow: 3px 1px 43px -9px rgba(0, 0, 0, 0.75);
 }
 
 .red-circle {
@@ -211,14 +212,11 @@ li {
     color: black;
     align-items: center;
     padding: 20px 20px 40px 20px;
+    box-shadow: 3px 1px 43px -9px rgba(0, 0, 0, 0.75);
     border-radius: 4px;
     margin-bottom: 40px; /* Space between the tiles */
 }
 
-.tile:hover {
-    box-shadow: 3px 1px 43px -9px rgba(0,0,0,0.75);
-    transition: 0.2s ease-in-out;
-}
 
 .tile-context {
     display: flex;
@@ -325,6 +323,7 @@ form, .contact {
 
 .contact {
     display: flex;
+    
     justify-content: space-between;
 }
 
@@ -342,9 +341,10 @@ form, .contact {
 
 
 input, textarea{
-    border: none;
+    border: 2px solid var(--font-color);
+    border-radius: 10px;
     border-bottom: 2px solid var(--font-color);
-    padding: 5px;
+    padding: 10px;
 }
 
 input:focus,
@@ -448,17 +448,44 @@ footer > p {
     
     .tile {
         width: 80%;
-        margin: 20px auto;
+        padding: 0;
+        margin: 20px auto auto auto;
 
     }
 
     .tile > img {
-        max-width: 100px;
-        max-height: 100px;
+        display: none;
     }
 
     .about {
         width: 90%;
         margin: 0 auto;
+        font-size: 15px;
     }
+
+    .tile-context {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        font-size: 16px;
+    }
+
+    .tile-context > p {
+        font-size: 15px;
+    }
+
+
+    .language-container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    svg {
+        width: 15px;
+    }
+
+
 }
