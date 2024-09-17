@@ -1,0 +1,464 @@
+* {
+    padding: 0;
+    margin: 0;
+    background-color: var(--background-color);
+    font-family: "Poppins", sans-serif;
+    color: var(--font-color);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --font-color: whitesmoke;
+    --background-color: #808080;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+header h2 {
+    font-size: 25px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.nav-links {
+    position: relative;
+    text-decoration: none;
+    margin-left: 50px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.nav-links:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: var(--font-color);
+    transition: width .2s ease;
+    -webkit-transition: width .2s ease;
+}
+
+.nav-links:hover:after {
+    width: 100%;
+    left: 0;
+    background: var(--font-color);
+}
+
+
+.main-container {
+    padding: 60px;
+    margin: 0 auto;
+    width: 800px;
+}
+
+.main-container > p {
+    font-size: 19px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.main-container > h1 {
+    margin: 30px 0 auto;
+    font-size: 80px;
+    font-family: "Fira Code", monospace;
+    position: relative;
+    transform: translateY(-50%);
+    animation: typewriter 2s steps(40) 1s 1 normal both,
+        blinkTextCursor 1.5s steps(2) infinite normal;
+
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid rgba(255, 255, 255, .75);
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 15ch;
+    }
+}
+
+@keyframes blinkTextCursor {
+    
+        50% {
+            border-right-color: transparent;
+        }
+    
+        100% {
+        border-right-color: rgba(0, 0, 0, 0);
+        }
+}
+
+.about {
+    border-radius: 5px;
+}
+
+.red-circle {
+    background-color: red;
+    margin-left: 10px;
+}
+
+.orange-circle {
+    background-color: orange;
+    margin-left: 5px;
+}
+
+.green-circle {
+    background-color: green;
+    margin-left: 5px;
+}
+
+.red-circle,
+.orange-circle,
+.green-circle {
+    height: 13px;
+    width: 13px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    display: inline-block;
+    gap: 10px;
+}
+
+.content > p {
+    height: auto;
+    background-color: #C8C8C8;
+    color: black;
+    padding: 30px;
+    font-family: "Source Code Pro", monospace;
+}
+
+.contact-links {
+    text-decoration: none;
+    background-color: transparent;
+    color: black;
+    font-weight: 600;
+}
+
+.contact-links:hover {
+    opacity: 0.6;
+}
+
+.const {
+    color: red;
+    font-style: italic;
+    background-color: transparent;
+    font-weight: 600;
+}
+
+.comment {
+    color: green;
+    background-color: transparent;
+    font-style: italic;
+}
+
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-heading, h2{
+    margin-top: 30px;
+    border-bottom: 3px solid var(--font-color);
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.main-text {
+    color: var(--font-color);
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column; /* Stack tiles vertically */
+    align-items: center; /* Center align tiles horizontally */
+    gap: 20px; /* Space between each tile */
+    padding: 20px;
+    background-color: grey;
+}
+
+.project-img {
+    max-width: 200px;
+}
+
+/* Tile styles */
+
+.tile {
+    background-color: #C8C8C8;
+    width: 100%; /* Full width of the parent container */
+    max-width: 770px; /* Ensuring it doesn't go beyond this width */
+    height: 260px;
+    display: flex;
+    text-align: center;
+    color: black;
+    align-items: center;
+    padding: 20px 20px 40px 20px;
+    border-radius: 4px;
+    margin-bottom: 40px; /* Space between the tiles */
+}
+
+.tile:hover {
+    box-shadow: 3px 1px 43px -9px rgba(0,0,0,0.75);
+    transition: 0.2s ease-in-out;
+}
+
+.tile-context {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 10px auto auto auto;
+    font-size: 20px;
+    background-color: #C8C8C8;
+    height: 200px;
+}
+
+.tile-context > h3 {
+    background-color: #C8C8C8;
+    color: #696969;
+    margin-bottom: 20px;
+    text-align: start;
+}
+
+.tile-context > p {
+    font-size: 16px;
+    width: 500px;
+    background-color: #C8C8C8;
+    color: #696969;
+    text-align: start;
+}
+
+
+.tile > img {
+    height: 150px;
+    width: 150px;
+    border-radius: 40px;
+    box-shadow: 25px 7px 63px -34px rgba(0,0,0,0.75);
+    border-right: 2px solid var(--background-color);
+    opacity: 0.8;
+}
+
+
+.language, .demo-link {
+    margin-top: 20px;
+    display: flex;
+    font-size: 15px;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #C8C8C8;
+    color: #696969;
+    border: 2px solid var(--background-color);
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.language-container, .demo-link-container {
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    gap: 10px;
+    background-color: #C8C8C8;
+}
+
+.link, p, svg {
+    background-color: transparent;
+    color: #696969;
+    text-decoration: none;
+}
+
+.demo-link {
+    margin: 0; /* Remove margin to reduce space */
+    padding: 5px 10px; /* Adjust padding if necessary */
+    display: flex;
+    gap: 5px; /* Reduce internal gap between link content */
+    top: 0;
+    position: relative;
+    transition: top ease 0.5s;
+}
+
+.demo-link-container {
+    display: flex;
+    gap: 5px; /* Reduce the gap between the demo links */
+    background-color: #C8C8C8;
+    align-items: center;
+}
+
+.demo-link:hover {
+    opacity: 0.7;
+    top: -6px;
+    cursor: pointer;
+}
+
+/* contact */
+
+form, .contact {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 400px;
+    margin: 0 auto;
+    gap: 20px;
+    color: var(--font-color);
+    padding-right: 20px;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+}
+
+::placeholder {
+    color: var(--font-color);
+}
+
+.contact-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+
+input, textarea{
+    border: none;
+    border-bottom: 2px solid var(--font-color);
+    padding: 5px;
+}
+
+input:focus,
+textarea:focus {
+    background-color: none;
+    outline: none;
+    border-bottom: 2px solid var(--font-color);
+}
+
+button {
+    margin-top: 30px;
+    width: 200px;
+    border: 2px solid var(--font-color);
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.contact-or {
+    border: none;
+    margin: 10px auto 10px auto;
+}
+
+/* footer */
+
+footer {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+footer > p {
+    text-align: center;
+    font-size: 12px;
+    color: white !important;
+}
+
+@media screen and (max-width: 600px) {
+
+    * {
+        overflow-x: hidden;
+    }
+
+    .main-text {
+        font-size: 15px !important;
+        width: 80%;
+        text-align: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    header {
+        width: 100%;
+        font-size: 7px;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between; /* Or space-around/center */
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+    
+    li {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .nav-links {
+        margin: 0; /* Reset any extra margins */
+    }
+    
+
+    .main-container > h1 {
+        font-size: 30px;
+        text-align: center;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        font-size: 14px;
+        margin-right: 40px;
+        
+    }
+
+    .main-container {
+        font-size: 12px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0px
+    }
+    
+    .tile {
+        width: 80%;
+        margin: 20px auto;
+
+    }
+
+    .tile > img {
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    .about {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
